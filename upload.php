@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     // hardcoded auth (A+ security)
     if ($_POST['password'] == "password" && getimagesize($_FILES['file']['tmp_name']))
     {
-        var_dump($_FILES);
 
         // Grab extension
         $e =  strtolower(pathinfo(basename($_FILES["file"]["name"]),PATHINFO_EXTENSION));
